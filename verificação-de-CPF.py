@@ -1,4 +1,16 @@
-cpf = [1,1,1,4,4,4,7,7,7]
+cpf = []
+cpfVerificacao = []
+
+while len(cpf) <= 10:
+    Algarismos = int(input("Escreva um dígito do seu cpf de cada vez: "))
+    if len(str(Algarismos)) > 1:
+        print("Nao pode escrever esse numero.")
+    else:
+        cpf.append(Algarismos)
+        cpfVerificacao.append(Algarismos)
+
+cpf.pop()
+cpf.pop()
 
 Condição = False
 Condição2 = False
@@ -11,13 +23,10 @@ while Condição != True:
         Multiplicados.append(resultado)
         contador -= 1
         if contador == 1:
-            print(Multiplicados)
             Condição = True
 
 Divisão = sum(Multiplicados)/11
-print(Divisão)
 Resto = sum(Multiplicados)%11 
-print(Resto)
 
 def verificacao1(Valor):
     if Resto < 2:
@@ -26,7 +35,6 @@ def verificacao1(Valor):
         Dígito = 11 - Resto       
     return Dígito
 
-print(verificacao1(Resto))
 cpf.append(verificacao1(Resto))
 
 while Condição2 != True:
@@ -37,13 +45,10 @@ while Condição2 != True:
         Multiplicados2.append(resultado2)
         contador2 -= 1
         if contador2 == 1:
-            print(Multiplicados2)
             Condição2 = True
 
 Divisão2 = sum(Multiplicados2)/11
-print(Divisão2)
 Resto2 = sum(Multiplicados2)%11 
-print(Resto2)
 
 def verificacao2(Valor2):
     if Resto2 < 2:
@@ -53,4 +58,8 @@ def verificacao2(Valor2):
     return Dígito2
 
 cpf.append(verificacao2(Resto2))
-print(cpf)
+
+if cpf == cpfVerificacao:
+    print("CPF Válido")
+else:
+    print("CPF Inválido")
