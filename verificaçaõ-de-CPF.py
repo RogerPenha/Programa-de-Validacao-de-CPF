@@ -13,8 +13,16 @@ while Condição != True:
             print(Multiplicados)
             Condição = True
 
+Divisão = sum(Multiplicados)/11
+print(Divisão)
+Resto = sum(Multiplicados)%11 
+print(Resto)
 
-valor1 = sum(Multiplicados)/11
-print(valor1)
-valor2 = sum(Multiplicados)%11 
-print(valor2)
+def verificacao1(Valor):
+    if Resto < 2:
+        Dígito = 0
+    if Resto >= 2:
+        Dígito = 11 - Resto
+    return Dígito
+
+print(verificacao1(Resto))
