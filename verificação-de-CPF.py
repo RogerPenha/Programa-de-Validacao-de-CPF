@@ -25,7 +25,6 @@ while Condição != True:
         if contador == 1:
             Condição = True
 
-Divisão = sum(Multiplicados)/11
 Resto = sum(Multiplicados)%11 
 
 def verificacao1(Valor):
@@ -47,7 +46,6 @@ while Condição2 != True:
         if contador2 == 1:
             Condição2 = True
 
-Divisão2 = sum(Multiplicados2)/11
 Resto2 = sum(Multiplicados2)%11 
 
 def verificacao2(Valor2):
